@@ -18,7 +18,7 @@ import { createBrowserRouter, RouteObject } from "react-router-dom";
 
 const authRoutes: RouteObject[] = [
   {
-    path: "/",
+    path: "/login",
     element: <AuthPage />,
   },
   // {

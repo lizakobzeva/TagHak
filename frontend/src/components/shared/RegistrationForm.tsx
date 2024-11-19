@@ -13,6 +13,8 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
+import { useNavigate } from "react-router-dom";
+import { registerFetch } from "@/services/AuthByEmail/AuthByEmail";
 
 const formSchema = z.object({
   username: z.string().min(2, {
@@ -25,6 +27,7 @@ const formSchema = z.object({
 });
 
 const RegistrationForm = () => {
+  const navigate = useNavigate();
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -36,9 +39,13 @@ const RegistrationForm = () => {
   });
 
   // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    const res = await registerFetch(
+      values.username,
+      values.email,
+      values.password
+    );
+    if (res) navigate("/");
     console.log(values);
   }
   return (
