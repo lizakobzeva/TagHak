@@ -1,7 +1,7 @@
 import Loader from "@/components/ui/loader";
 // import { getUser } from "@/features/GetUser/model/service/GetUser/GetUser";
-import { getLocationQuery } from "@/helpers/getLocationQuery";
-import { showErrorNotification } from "@/helpers/notification";
+import { getLocationQuery } from "@/lib/helpers/getLocationQuery";
+import { showErrorNotification } from "@/lib/helpers/notification";
 import { FC, PropsWithChildren, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 

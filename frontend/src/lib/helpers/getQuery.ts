@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function getQuery(obj: Record<string, any>): string {
   const queryParams = Object.entries(obj)
     .flatMap(([key, value]) => {
