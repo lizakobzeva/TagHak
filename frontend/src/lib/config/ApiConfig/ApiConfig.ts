@@ -1,4 +1,4 @@
-import { urls } from "@/constants/urls";
+import { urls } from "@/lib/constants/urls";
 import axios from "axios";
 
 const axiosInstance = axios.create({

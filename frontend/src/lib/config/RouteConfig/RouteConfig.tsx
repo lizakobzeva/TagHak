@@ -11,7 +11,7 @@
 // import { LikesPage } from "@/pages/LikesPage";
 // import { WagonsPage } from "@/pages/WagonsPage";
 
-import { ProtectedRoute } from "@/components/providers/router/ProtectedRoute";
+import { ProtectedRoute } from "@/components/shared/ProtectedRoute";
 import { AuthPage } from "@/pages/AuthPage";
 import MainPage from "@/pages/MainPage";
 import { createBrowserRouter, RouteObject } from "react-router-dom";

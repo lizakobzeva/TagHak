@@ -5,7 +5,7 @@ export const queryParamsToObject = (
   const result: Record<string, string | string[]> = {};
 
   for (const [key, value] of params.entries()) {
-    if (result.hasOwnProperty(key)) {
+    if (Object.prototype.hasOwnProperty.call(result, key)) {
       if (Array.isArray(result[key])) {
         (result[key] as string[]).push(value);
       } else {

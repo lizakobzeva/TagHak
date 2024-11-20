@@ -1,5 +1,5 @@
-import { urls } from "@/constants/urls";
-import { showErrorNotification } from "@/helpers/notification";
+import { urls } from "@/lib/constants/urls";
+import { showErrorNotification } from "@/lib/helpers/notification";
 import axios, { AxiosError } from "axios";
 const axiosInstance = axios.create({
   baseURL: urls.api,
