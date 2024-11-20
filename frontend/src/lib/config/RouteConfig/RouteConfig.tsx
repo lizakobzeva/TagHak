@@ -12,14 +12,15 @@
 // import { WagonsPage } from "@/pages/WagonsPage";
 
 import { ProtectedRoute } from "@/components/shared/ProtectedRoute";
-import { AuthPage } from "@/pages/AuthPage";
-import MainPage from "@/pages/MainPage";
+import AuthPageAsync from "@/pages/AuthPage/AuthPage.async";
+import MainPage from "@/pages/MainPage/MainPage";
+import MainPageAsync from "@/pages/MainPage/MainPage.async";
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 
 const authRoutes: RouteObject[] = [
   {
     path: "/login",
-    element: <AuthPage />,
+    element: <AuthPageAsync />,
   },
   // {
   //   path: "/register",
@@ -45,7 +46,7 @@ export const appRoutersConfig = createBrowserRouter([
     path: "/",
     element: (
       <ProtectedRoute>
-        <MainPage />
+        <MainPageAsync />
       </ProtectedRoute>
     ),
     errorElement: (

@@ -2,8 +2,7 @@ import LoginForm from "@/components/shared/LoginForm";
 import RegistrationForm from "@/components/shared/RegistrationForm";
 import Container from "@/components/ui/container";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
-export function AuthPage() {
+function AuthPage() {
   return (
     <Container className="flex items-center justify-center h-screen">
       <Tabs defaultValue="account" className="w-[400px]">
@@ -21,3 +20,5 @@ export function AuthPage() {
     </Container>
   );
 }
+
+export default AuthPage;
